@@ -1,0 +1,5 @@
+# untested - which folder, expecting to be in the same folder
+
+set FLASK_APP=hello
+set FLASK_ENV=development
+flask run
