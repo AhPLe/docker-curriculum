@@ -5,3 +5,6 @@ def test():
         file.write(var_name)
     print('final')
     return var_name
+    
+if name=='__main__':
+    test()
