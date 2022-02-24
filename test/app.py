@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 import os
 
 #import subprocess
-import test1
+import grade_program
 
 app = Flask(__name__)
 
@@ -26,7 +26,7 @@ def upload_file():
     #grade = subprocess.run("test1.py", capture_output=True, shell=True).returncode
     #print('printing from hello')
     grade = ''
-    grade = test1.test()
+    grade = grade_program.grade()
     #with open('temp.txt', 'r') as file:
     #    grade = file.read()
     print(grade)
