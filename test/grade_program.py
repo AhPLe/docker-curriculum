@@ -21,6 +21,6 @@ def grade():
     
     print(grade_output)
     
-    with open('graded.txt', 'wb') as fh:
-        fh.write(grade)
+    #with open('graded.txt', 'wb') as fh:
+    #    fh.write(grade)
     return grade
