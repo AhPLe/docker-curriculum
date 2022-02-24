@@ -17,7 +17,6 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
 @app.route("/dfile")
 def upload_file():
     #subprocess.call("test1.py", shell=True)
@@ -69,3 +68,6 @@ def hello_world():
           <input type=submit value=Upload>
         </form>
         '''
+        
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
