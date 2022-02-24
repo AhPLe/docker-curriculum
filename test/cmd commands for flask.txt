@@ -3,3 +3,5 @@
 set FLASK_APP=hello
 set FLASK_ENV=development
 flask run
+
+for ubuntu: export instead of set
