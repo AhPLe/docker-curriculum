@@ -29,8 +29,8 @@ def upload_file():
     #with open('temp.txt', 'r') as file:
     #    grade = file.read()
     print(grade)
-    print('ending print from hello')
-    return render_template("uploaded.html", filename=request.args.get('name'))
+    #print('ending print from hello')
+    return render_template("graded.html", grade_details=grade)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_world():
