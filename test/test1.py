@@ -6,5 +6,5 @@ def test():
     print('final')
     return var_name
     
-if name=='__main__':
+if __name__=='__main__':
     test()
