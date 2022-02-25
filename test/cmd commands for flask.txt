@@ -5,3 +5,6 @@ set FLASK_ENV=development
 flask run
 
 for ubuntu: export instead of set
+
+docker build -t hickorydock1/dockerpa2 .
+docker run -p 8888:5000 hickorydock1/dockerpa2

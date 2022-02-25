@@ -69,6 +69,15 @@ def hello_world():
           <input type=submit value=Upload>
         </form>
         '''
-        
+  
+@app.route("/index")
+def index():
+    return "Hello CSCI 4795/6795. This is index page."
+@app.route("/about")
+def about():
+    return "Hello CSCI 4795/6795. This is about page."
+  
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host="0.0.0.0", debug=True)
+    #app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    #possible placement of public IPv4 address
