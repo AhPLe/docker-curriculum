@@ -13,7 +13,7 @@ def grade():
         compile = True
     subprocess.call("rm -f ./output", shell=True)
     retcode = subprocess.call("./test.sh", shell=True)
-    if !compile:
+    if not compile:
         grade = "Score: " + str(retcode) + " out of 2 correct, failed to compile."
     else:
         grade = "Score: " + str(retcode) + " out of 2 correct."
