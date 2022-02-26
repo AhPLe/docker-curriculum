@@ -9,7 +9,7 @@ def grade():
         compile = False
         print("failed to compile walk.cc")
         grade = "Score: 0. Failed to compile."
-        exit()
+        exit
         return grade #shouldn't get here, this is a test
     else:
         compile = True
