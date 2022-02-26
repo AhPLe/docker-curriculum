@@ -9,8 +9,8 @@ def grade():
         compile = False
         print("failed to compile walk.cc")
         grade = "Score: 0. Failed to compile."
-        exit
-        return grade #shouldn't get here, this is a test
+        #exit, not sure how this was supposed to work
+        return grade 
     else:
         compile = True
     subprocess.call("rm -f ./output", shell=True)
@@ -25,10 +25,5 @@ def grade():
     with open('uploads/walk.cc','r') as fs:
         grade_output = fs.read()
         grade = grade + '\n' + grade_output
-        #print(grade_output)
     
-    print(grade)
-    
-    #with open('graded.txt', 'wb') as fh:
-    #    fh.write(grade)
     return grade
