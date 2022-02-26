@@ -8,13 +8,15 @@ def grade():
     if retcode:
         compile = False
         print("failed to compile walk.cc")
-        exit
+        grade = "Score: 0. Failed to compile."
+        #exit, not sure how this was supposed to work
+        return grade 
     else:
         compile = True
     subprocess.call("rm -f ./output", shell=True)
     retcode = subprocess.call("./test.sh", shell=True)
     if not compile:
-        grade = "Score: " + str(retcode) + " out of 2 correct, failed to compile."
+        grade = "Score: " + str(retcode) + " out of 2 correct."
     else:
         grade = "Score: " + str(retcode) + " out of 2 correct."
     
@@ -23,10 +25,5 @@ def grade():
     with open('uploads/walk.cc','r') as fs:
         grade_output = fs.read()
         grade = grade + '\n' + grade_output
-        #print(grade_output)
     
-    print(grade)
-    
-    #with open('graded.txt', 'wb') as fh:
-    #    fh.write(grade)
     return grade

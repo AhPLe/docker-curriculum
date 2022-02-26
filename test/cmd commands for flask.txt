@@ -10,3 +10,6 @@ for ubuntu: export instead of set
 
 docker build -t hickorydock1/dockerpa2 .
 docker run -p 8888:5000 hickorydock1/dockerpa2
+
+minimal:
+docker run -p 80:5000 hickorydock1/dockerpa2
